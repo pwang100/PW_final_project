@@ -3,6 +3,7 @@ title: "What is the correlation between happiness and a well-run country?"
 format: dashboard
 theme: lux
 author: Priscilla Wang
+default: false
 ---
 
 ```{python}
