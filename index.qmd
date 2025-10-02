@@ -222,7 +222,12 @@ data_2023 = data_2023.dropna(subset=['happiness_2023'])
 
 
 # Page 1: Happiness 
-[text box: what is happiness and how it is scored]
+
+Happiness is a complex emotion of general positive feelings, such as joy and contentment. Many psychological studies have correlated happiness with good health, purpose and overall life satisfaction. However, how much of one's happiness is influenced by where they live and related factors beyond one's control?
+
+Despite being difficult to quantify, the Cantril life ladder aims to do this. This is the national average response to the question of life evaluations asking the following “Please imagine a ladder, with steps numbered from 0 at the bottom to 10 at the top. The top of the ladder represents the best possible life for you and the bottom of the ladder represents the worst possible life for you. On which step of the ladder would you say you personally feel you stand at this time?” Gapminder' happiness score adjusts this score from 0 to 100, with 100 being the most happy and 0 being the least. 
+
+This study aims to explore the corelation between happiness and common metrics of a well-run country. These metrics include the state of a country's economy, society and politics. Here, we will correlate these metrics with the happiness score of each country in 2023. 
 
 
 ```{python}
