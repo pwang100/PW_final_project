@@ -225,12 +225,12 @@ data_2023 = data_2023.dropna(subset=['happiness_2023'])
 
 
 # Happiness 
-## Row {height="20%"}
+## Row {height="10%"}
 Happiness is a complex emotion of general positive feelings, such as joy and contentment. Many psychological studies have correlated happiness with good health, purpose and overall life satisfaction. However, how much of one's happiness is influenced by where they live? Despite being difficult to quantify, the Cantril life ladder aims to do this with a score from 0 to 100, with 100 being the most happy and 0 being the least. 
 
 This study aims to explore the corelation between happiness and common metrics of a well-run country in 2023.
 
-## Row {height="80%"}
+## Row {height="90%"}
 ```{python}
 # Plot a world map of happiness_2023 using Plotly Express with white to green color scale
 fig = px.choropleth(
@@ -284,6 +284,8 @@ fig.show()
 ```
 
 # Top and Bottom 5 Countries
+
+## Row {height="90%"}
 ```{python}
 fig = px.bar(
     top_bottom_5,
@@ -292,23 +294,29 @@ fig = px.bar(
     color="gdp_2023",
     hover_data={"gdp_2023": True},
     color_continuous_scale=["white", "green"],
-    height=1000,
-    width=1500,
     title="Happiness of Top 5 and Botton 5 Countries in 2023, colored by GDP per Capita (2023)"
 )
 fig.update_layout(
     showlegend=True,
     xaxis_title=" ",
-    margin=dict(l=200, r=200)
+    yaxis_title="Happiness Score (2023)",
+    yaxis_title_font=dict(size=14),
+    yaxis_title_standoff=10,
+    margin=dict(l=0, r=0),
+    xaxis_tickangle=10,
+    font=dict(size=10),
 )
 ```
 
+## Row {height="10%"}
  We can see here a correlation between GDP/capita and happiness, concentrated in North America, Europe and Oceana. However, this is not always correlated, since Costa Rica is one of the happiess countries yet with a lower GDP/capita, so we must investigate beyond this metric. 
 
 # Happiness x Inequality
 
-The Gini coefficient reprersents income inequality in a society, with a higher number being more inequality. We can see here patters with lower inequality correlate with happiness. 
+## Row {height="10%"}
+The Gini coefficient reprersents income inequality in a society, with a higher number being more inequality. We can see here patterns with lower inequality correlate with happiness. 
 
+## Row {height="90%"}
 ```{python}
 # Plot an interactive scatter plot: happiness_2023 (x) vs gini_2023 (y), hover shows country
 fig = px.scatter(
@@ -324,8 +332,10 @@ fig.show()
 
 # Happiness x Development
 
+## Row {height="10%"}
 Human Development Index is an index used to rank countries by level of "human development". It contains three dimensions: health level, educational level and living standard. We can see here patters with higher development correlate with happiness.
 
+## Row {height="90%"}
 ```{python}
 # Plot an interactive scatter plot: happiness_2023 (x) vs development_2023 (y), hover shows country
 fig = px.scatter(
@@ -339,10 +349,12 @@ fig = px.scatter(
 fig.show()
 ```
 
-# Page 4: Happiness x Stability
+# Happiness x Political Stability
 
+## Row {height="20%"}
 Lastly, the integrity of those in power can greatly determine how a country is run. The corruption perception index ranks countries/territories based on how corrupt their public sector is perceived to be from 0 to 100, in which 0 is highly corrupt and 100 is very clean. We see a strong pattern between happiness and less corruption. The size of each data point represents GDP/capita, which also correlates with happiness. 
 
+## Row {height="80%"}
 ```{python}
 # Plot an interactive scatter plot: happiness_2023 (x) vs corruption_2023 (y), hover shows country, marker size by gdp_2023
 fig = px.scatter(
