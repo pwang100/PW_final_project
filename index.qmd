@@ -230,7 +230,6 @@ Happiness is a complex emotion of general positive feelings, such as joy and con
 
 This study aims to explore the corelation between happiness and common metrics of a well-run country in 2023.
 
-## Row {height="50%"}
 ```{python}
 # Plot a world map of happiness_2023 using Plotly Express with white to green color scale
 fig = px.choropleth(
@@ -245,7 +244,6 @@ fig = px.choropleth(
 fig.show()
 ```
 
-## Row {height="50%"}
 ```{python}
 # Create a table with top 5 and bottom 5 countries based on happiness_2023 value, sorted descending
 top_5 = data_2023.nlargest(5, 'happiness_2023')
