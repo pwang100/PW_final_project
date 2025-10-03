@@ -251,7 +251,18 @@ fig.show()
 top_5 = data_2023.nlargest(5, 'happiness_2023')
 bottom_5 = data_2023.nsmallest(5, 'happiness_2023')
 top_bottom_5 = pd.concat([top_5, bottom_5]).sort_values(by='happiness_2023', ascending=False)
-top_bottom_5
+
+```
+
+```{python}
+# Create a table from top_bottom_5 with selected columns and renamed headers
+top_bottom_5_table = top_bottom_5[['country', 'country_code', 'happiness_2023']].rename(
+    columns={
+        'country_code': 'Country Code',
+        'happiness_2023': 'Happiness Score (2023)'
+    }
+)
+top_bottom_5_table
 ```
 
 # Happiness x GDP
