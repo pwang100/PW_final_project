@@ -225,12 +225,12 @@ data_2023 = data_2023.dropna(subset=['happiness_2023'])
 
 
 # Happiness 
-## Row {height="10%"}
+
 Happiness is a complex emotion of general positive feelings, such as joy and contentment. Many psychological studies have correlated happiness with good health, purpose and overall life satisfaction. However, how much of one's happiness is influenced by where they live? Despite being difficult to quantify, the Cantril life ladder aims to do this with a score from 0 to 100, with 100 being the most happy and 0 being the least. 
 
 This study aims to explore the corelation between happiness and common metrics of a well-run country in 2023.
 
-## Row {height="90%"}
+
 ```{python}
 # Plot a world map of happiness_2023 using Plotly Express with white to green color scale
 fig = px.choropleth(
